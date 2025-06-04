@@ -179,10 +179,16 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
 
 .section__text {
   align-self: center;
