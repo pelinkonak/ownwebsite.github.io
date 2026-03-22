@@ -1,0 +1,10 @@
+{
+  "name": "ownwebsite.github.io",
+  "private": true,
+  "description": "Static portfolio — local preview",
+  "scripts": {
+    "dev": "npx --yes serve . -l 8080",
+    "start": "npx --yes serve . -l 8080",
+    "dev:py": "python3 -m http.server 8080"
+  }
+}
