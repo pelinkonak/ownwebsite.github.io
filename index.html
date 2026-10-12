@@ -3,366 +3,460 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pelin Konak · Ürün, AI &amp; Mentörlük</title>
     <meta
       name="description"
-      content="Pelin Konak — Computer Engineer, Technical Product & Full-Stack. Ürün yönetimi, AI ve web teknolojileri."
+      content="Pelin Konak — Bilgisayar mühendisi, PelCo kurucusu, SabancıDx Product Management Intern. Kariyer, staj, AI ile MVP, ürün yönetimi ve girişimcilik mentörlüğü."
     />
-    <title>Pelin Konak | Portfolio</title>
+    <meta property="og:title" content="Pelin Konak · Ürün, AI & Mentörlük" />
+    <meta
+      property="og:description"
+      content="PelCo kurucusu, ürün yöneticisi adayı, yazılım içerik üreticisi. 1-1 kariyer ve ürün mentörlüğü."
+    />
+    <meta property="og:image" content="https://pelinkonak.github.io/ownwebsite.github.io/assets/pelin-hero.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#f7f5f0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaquaries.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">İçeriğe geç</a>
 
-    <!-- Desktop Navbar -->
-    <nav id="desktop-nav" class="site-nav">
-      <a href="#profile" class="logo"><span class="logo__dot"></span>Pelin Konak</a>
-      <ul class="nav-links">
-        <li><a href="#about">Hakkımda</a></li>
-        <li><a href="#product">Ürün &amp; PM</a></li>
-        <li><a href="#experience">Yetkinlikler</a></li>
-        <li><a href="#featured">Öne çıkanlar</a></li>
-        <li><a href="#github-projects">GitHub</a></li>
-        <li><a href="#contact">İletişim</a></li>
-      </ul>
-      <button type="button" class="btn theme-toggle" aria-label="Tema değiştir"></button>
-    </nav>
-
-    <!-- Mobile Navbar -->
-    <nav id="hamburger-nav" class="site-nav">
-      <a href="#profile" class="logo"><span class="logo__dot"></span>Pelin Konak</a>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Menü">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <ul>
-            <li><a href="#about" onclick="toggleMenu()">Hakkımda</a></li>
-            <li><a href="#product" onclick="toggleMenu()">Ürün &amp; PM</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Yetkinlikler</a></li>
-            <li><a href="#featured" onclick="toggleMenu()">Öne çıkanlar</a></li>
-            <li><a href="#github-projects" onclick="toggleMenu()">GitHub</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">İletişim</a></li>
-            <li><button type="button" class="btn theme-toggle" aria-label="Tema değiştir"></button></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Profile Section -->
-    <section id="profile" class="hero">
-      <div class="hero__blobs" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__spotlight" id="hero-spotlight" aria-hidden="true"></div>
-      <div class="section__pic-container hero__pic reveal reveal--right">
-        <img src="./assets/pelformal.jpg" alt="Pelin Konak" width="320" height="320" />
-      </div>
-      <div class="section__text hero__text reveal reveal--left">
-        <p class="section__text__p1 mono">Merhaba, ben</p>
-        <h1 class="title hero__title">Pelin Konak</h1>
-        <p class="section__text__p2 hero__role">
-          Computer Engineer · Technical Product &amp; Full-Stack
-        </p>
-        <p class="hero__tagline">
-          Uçtan uca yazılım ürünleri, AI destekli sistemler ve girişim ortamları; ürün sahipliği ve çapraz fonksiyonel
-          ekip koordinasyonu.
-        </p>
-        <div class="btn-container">
-          <a class="btn btn-primary" href="./assets/pelinkonakcv.pdf" target="_blank" rel="noopener">CV’yi görüntüle</a>
-          <a class="btn btn-ghost" href="./assets/pelinkonakcv.pdf" download="Pelin_Konak_CV.pdf">CV indir</a>
-          <button type="button" class="btn btn-ghost" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
-            İletişim
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Ana menü">
+        <a href="#top" class="logo"><span class="logo__mark">PK</span><span>Pelin Konak</span></a>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#now">Şu an</a></li>
+          <li><a href="#mentorluk">Mentörlük</a></li>
+          <li><a href="#topluluk">Topluluk</a></li>
+          <li><a href="#deneyim">Deneyim</a></li>
+          <li><a href="#projeler">Projeler</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+        <div class="nav__actions">
+          <button type="button" class="icon-btn theme-toggle" aria-label="Temayı değiştir"></button>
+          <a class="btn btn-primary btn-sm nav__cta" href="https://pelco.tr/" target="_blank" rel="noopener">Mentörlük al</a>
+          <button type="button" class="icon-btn nav__burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span>
           </button>
         </div>
-        <div id="socials-container">
-          <a href="https://www.linkedin.com/in/pelin-konak-ab9156249/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="./assets/linkedin.png" alt="" class="icon" width="28" height="28" />
-          </a>
-          <a href="https://github.com/pelinkonak" target="_blank" rel="noopener" aria-label="GitHub">
-            <img src="./assets/github.png" alt="" class="icon" width="28" height="28" />
-          </a>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider section-divider--line" aria-hidden="true"></div>
-
-    <!-- About Section -->
-    <section id="about" class="section-block">
-      <p class="section__text__p1 mono">Tanışalım</p>
-      <h2 class="title section-title">Hakkımda</h2>
-      <div class="section-container about-layout">
-        <div class="section__pic-container about__pic reveal reveal--right">
-          <img src="./assets/performal2.jpg" alt="" class="about-pic" width="280" height="360" />
-        </div>
-        <div class="about-details-container reveal reveal--left">
-          <div class="about-containers">
-            <div class="details-container card-soft">
-              <img src="./assets/experience.png" alt="" class="icon" width="28" height="28" />
-              <h3>Deneyim</h3>
-              <p>
-                ISTUN Girişimcilik Kulübü başkan yardımcılığı, IEEE üyesi; Sorwe stajı, Denizbank bootcamp ve veri
-                bilimi/AI eğitimleri; Zpigo kurucu ortaklığı.
-              </p>
-            </div>
-            <div class="details-container card-soft">
-              <img src="./assets/education.png" alt="" class="icon" width="28" height="28" />
-              <h3>Eğitim</h3>
-              <p>
-                İstanbul Sağlık ve Teknoloji Üniversitesi · Bilgisayar Mühendisliği (2023–devam). Hazırlık: 2022–2023.
-                Lise: Nevzat Ayaz Anadolu Lisesi (2017–2021).
-              </p>
-            </div>
-          </div>
-          <div class="text-container prose">
-            <p>
-              Bilgisayar mühendisliği öğrencisiyim; uçtan uca yazılım ürünleri geliştirme, AI tabanlı çözümler ve
-              startup ortamlarında aktif olarak yer alıyorum. Ürün sahipliği, ekip koordinasyonu ve teknik fikirleri ölçeklenebilir
-              ürünlere dönüştürmeye odaklanıyorum. <strong>Diller:</strong> Türkçe (ana dil), İngilizce (ileri), İspanyolca
-              (temel).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider section-divider--wave section-divider--into-alt" aria-hidden="true">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" focusable="false">
-        <path
-          d="M0,20 C200,36 400,4 600,20 C800,36 1000,4 1200,20 L1200,40 L0,40 Z"
-        />
-      </svg>
-    </div>
-
-    <!-- Product & PM -->
-    <section id="product" class="section-block section-block--alt">
-      <p class="section__text__p1 mono">Ürün &amp; liderlik</p>
-      <h2 class="title section-title">Proje yönetimi &amp; ürün</h2>
-      <p class="section-lead reveal reveal--fade">
-        Gecikme ve riskleri erken görmeyi hedefleyen ürünler; roadmap, önceliklendirme ve teknik mimariyi bir arada
-        düşünüyorum.
-      </p>
-      <div class="pm-grid stagger-group">
-        <article class="pm-card card-soft interactive-card reveal-item">
-          <span class="pm-card__badge mono">PelCo</span>
-          <h3>AI destekli proje yönetimi</h3>
-          <p>
-            Ekiplerin gecikme ve riskleri erken tespit etmesine yardımcı AI odaklı platform. Ürün vizyonu, sistem
-            mimarisi ve frontend/backend koordinasyonu.
-          </p>
-          <a class="text-link" href="https://www.pelcoapp.com" target="_blank" rel="noopener">pelcoapp.com →</a>
-          <p class="pm-card__note">BTM kuluçka programına kabul.</p>
-        </article>
-        <article class="pm-card card-soft interactive-card reveal-item">
-          <span class="pm-card__badge mono">Pelco · E-ticaret</span>
-          <h3>Otomotiv yedek parça e-ticaret</h3>
-          <p>
-            Otomotiv yedek parça platformunun uçtan uca geliştirilmesi: müşteri ve admin süreçleri. İş ihtiyaçlarını
-            ürün gereksinimlerine dökme, özellik önceliklendirme; FastAPI ile backend servisleri, görev planlama ve
-            teslimat takibi.
-          </p>
-        </article>
-        <article class="pm-card card-soft interactive-card reveal-item">
-          <span class="pm-card__badge mono">Sorwe · Staj</span>
-          <h3>AI chatbot &amp; web platformu</h3>
-          <p>
-            AI chatbot geliştirme ve web tabanlı platform üzerinde çapraz fonksiyonel ekip liderliği. Ürün tasarımı,
-            teknik altyapı ve proje kilometre taşlarında koordinasyon; liderlik, ürün yönetimi ve girişimcilik
-            becerilerinin güçlendirilmesi. Yoğun veri bilimi ve AI eğitimi, gerçek dünya ML vaka çalışmaları.
-          </p>
-        </article>
-        <article class="pm-card card-soft interactive-card reveal-item">
-          <span class="pm-card__badge mono">Zpigo · Kurucu ortak</span>
-          <h3>Proje yönetimi, ürün yol haritası &amp; AI</h3>
-          <p>
-            Ürün roadmap’i ve özellik önceliklerinin tanımı; tasarım ve geliştirme ekipleriyle koordinasyon, teslim
-            takvimlerinde sahiplik. Sessiz istifa tahmini odaklı AI ürününde strateji ve yürütme.
-          </p>
-          <a class="text-link" href="https://www.zpigo.com" target="_blank" rel="noopener">zpigo.com →</a>
-          <p class="pm-card__note">İBB kabul alındı.</p>
-        </article>
-      </div>
-    </section>
-    <div class="section-divider section-divider--wave section-divider--into-base" aria-hidden="true">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" focusable="false">
-        <path
-          d="M0,20 C200,4 400,36 600,20 C800,4 1000,36 1200,20 L1200,40 L0,40 Z"
-        />
-      </svg>
-    </div>
-
-    <!-- Experience / Skills -->
-    <section id="experience" class="section-block">
-      <p class="section__text__p1 mono">Araç seti</p>
-      <h2 class="title section-title">Yetkinlikler</h2>
-      <div class="experience-details-container">
-        <div class="about-containers skills-row">
-          <div class="details-container card-soft interactive-card reveal reveal--left">
-            <h3 class="experience-sub-title">Backend &amp; AI</h3>
-            <div class="article-container">
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Python</h4><p>İleri</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>FastAPI</h4><p>Ürün projeleri</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>NLP / FAISS</h4><p>AI doc systems</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Veri &amp; ML</h4><p>EDA, sınıflandırma</p></div></article>
-            </div>
-          </div>
-          <div class="details-container card-soft interactive-card reveal reveal--right">
-            <h3 class="experience-sub-title">Ürün &amp; mühendislik</h3>
-            <div class="article-container">
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Ürün yönetimi</h4><p>Roadmap, öncelik</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>React</h4><p>UI</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Next.js</h4><p>Full-stack web</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>HTML / CSS / JS</h4><p>Web</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Kotlin</h4><p>Android</p></div></article>
-              <article class="skill-chip"><span class="mono">●</span><div><h4>Git</h4><p>İş birliği</p></div></article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider section-divider--wave section-divider--into-alt" aria-hidden="true">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" focusable="false">
-        <path
-          d="M0,20 C200,36 400,4 600,20 C800,36 1000,4 1200,20 L1200,40 L0,40 Z"
-        />
-      </svg>
-    </div>
-
-    <!-- Featured projects (products + flagship repos) -->
-    <section id="featured" class="section-block section-block--alt">
-      <p class="section__text__p1 mono">Seçilmiş işler</p>
-      <h2 class="title section-title">Öne çıkan projeler</h2>
-      <div class="featured-grid stagger-group" id="featured-grid">
-        <article class="project-card card-soft interactive-card reveal-item">
-          <div class="project-card__media" style="--accent: #6366f1">
-            <span class="project-card__placeholder mono">PC</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-title">PelCo</h3>
-            <p class="project-card__desc">
-              AI destekli proje yönetimi ve risk izleme: ekiplerin gecikme ve riskleri erken görmesi. Ürün vizyonu, mimari
-              ve frontend/backend koordinasyonu; BTM kuluçka.
-            </p>
-            <div class="btn-container project-card__actions">
-              <a class="btn btn-sm btn-primary" href="https://www.pelcoapp.com" target="_blank" rel="noopener">Site</a>
-            </div>
-          </div>
-        </article>
-        <article class="project-card card-soft interactive-card reveal-item">
-          <div class="project-card__media" style="--accent: #0ea5e9">
-            <span class="project-card__placeholder mono">VN</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-title">Vera Natura</h3>
-            <p class="project-card__desc">
-              Doğal ürünler için e-ticaret: marka, paketleme ve müşteri deneyimi. Dinamik arayüzlerle kullanılabilirliği
-              artırma; ürün sunumu ve satış akışları.
-            </p>
-            <div class="btn-container project-card__actions">
-              <a class="btn btn-sm btn-primary" href="https://www.veranatura.com.tr" target="_blank" rel="noopener">Site</a>
-            </div>
-          </div>
-        </article>
-        <article class="project-card card-soft interactive-card reveal-item">
-          <div class="project-card__media" style="--accent: #a855f7">
-            <span class="project-card__placeholder mono">IELTS</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-title">IELTS Talk</h3>
-            <p class="project-card__desc">
-              AI tabanlı IELTS speaking pratiği: etkileşimli simülasyonlar ve anında geri bildirim. Ürün geliştirme,
-              özellik planlama ve erişilebilir bir pratik deneyimi.
-            </p>
-            <div class="btn-container project-card__actions">
-              <a class="btn btn-sm btn-primary" href="https://ieltstalk.com" target="_blank" rel="noopener">Site</a>
-            </div>
-          </div>
-        </article>
-        <article class="project-card card-soft interactive-card reveal-item">
-          <div class="project-card__media" style="--accent: #f97316">
-            <span class="project-card__placeholder mono">PA</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-title">PelAcademy</h3>
-            <p class="project-card__desc">
-              Vibe coding ve kendi MVP’lerini üretmeyi öğreten AI destekli web uygulaması. Ürün stratejisi, özellik
-              planlama ve platform geliştirme sorumluluğu.
-            </p>
-            <div class="btn-container project-card__actions">
-              <a class="btn btn-sm btn-primary" href="https://www.pelacademyapp.com" target="_blank" rel="noopener">Site</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <div class="section-divider section-divider--wave section-divider--into-base" aria-hidden="true">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" focusable="false">
-        <path
-          d="M0,20 C200,4 400,36 600,20 C800,4 1000,36 1200,20 L1200,40 L0,40 Z"
-        />
-      </svg>
-    </div>
-
-    <!-- GitHub API projects -->
-    <section id="github-projects" class="section-block">
-      <p class="section__text__p1 mono">Açık kaynak</p>
-      <h2 class="title section-title">GitHub depoları</h2>
-      <p class="section-lead reveal reveal--fade">
-        Güncel public repolar API ile yüklenir; önizleme görselleri GitHub Open Graph üzerinden gelir. AI Document Reader
-        ve diğer kod projeleri burada.
-      </p>
-      <div id="github-loading" class="github-loading mono hidden" role="status">Repolar yükleniyor…</div>
-      <div id="github-error" class="github-error hidden" role="alert"></div>
-      <div class="github-grid" id="github-grid"></div>
-    </section>
-    <div class="section-divider section-divider--wave section-divider--into-alt" aria-hidden="true">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" focusable="false">
-        <path
-          d="M0,20 C200,36 400,4 600,20 C800,36 1000,4 1200,20 L1200,40 L0,40 Z"
-        />
-      </svg>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-block section-block--alt">
-      <p class="section__text__p1 mono">Birlikte çalışalım</p>
-      <h2 class="title section-title">İletişim</h2>
-      <div class="contact-info-upper-container contact-stagger stagger-group">
-        <div class="contact-info-container card-soft interactive-card reveal-item">
-          <img src="./assets/email.png" alt="" class="icon contact-icon email-icon" width="28" height="28" />
-          <p><a href="mailto:pelin.konak928@gmail.com">pelin.konak928@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container card-soft interactive-card reveal-item">
-          <img src="./assets/linkedin.png" alt="" class="icon contact-icon" width="28" height="28" />
-          <p><a href="https://www.linkedin.com/in/pelin-konak-ab9156249/" target="_blank" rel="noopener">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container card-soft interactive-card reveal-item reveal-item--fade">
-          <p class="mono contact-label">Telefon</p>
-          <p><a href="tel:+905301021832">+90 530 102 1832</a></p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <nav aria-label="Alt menü">
-        <ul class="nav-links">
-          <li><a href="#about">Hakkımda</a></li>
-          <li><a href="#product">Ürün &amp; PM</a></li>
-          <li><a href="#experience">Yetkinlikler</a></li>
-          <li><a href="#featured">Öne çıkanlar</a></li>
-          <li><a href="#github-projects">GitHub</a></li>
-          <li><a href="#contact">İletişim</a></li>
-        </ul>
       </nav>
-      <p>© <span id="year"></span> Pelin Konak</p>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero container">
+        <div class="hero__text">
+          <p class="status-pill reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            Şu an: SabancıDx'te Product Management · PelCo kurucusu
+          </p>
+          <h1 class="hero__title reveal">
+            Fikirleri <em>çalışan ürünlere</em>, öğrencileri <em>kendi yollarına</em> taşıyorum.
+          </h1>
+          <p class="hero__lead reveal">
+            Ben Pelin — bilgisayar mühendisliği öğrencisi, ürün yöneticisi ve PelCo'nun kurucusuyum. AI destekli ürünler
+            geliştiriyor, hackathon'lar ve PelCo Talks düzenliyor, yazılım üzerine içerik üretiyor ve kariyerinin başındaki
+            gençlere birebir mentörlük veriyorum.
+          </p>
+          <div class="hero__ctas reveal">
+            <a class="btn btn-primary" href="#mentorluk">Mentörlüğü incele <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="./assets/pelinkonakcv.pdf" target="_blank" rel="noopener">CV'yi görüntüle</a>
+          </div>
+          <ul class="hero__socials reveal" aria-label="Sosyal bağlantılar">
+            <li><a href="https://www.linkedin.com/in/pelinkonak/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/pelinkonak" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://instagram.com/peliinkonak" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://pelco.tr/" target="_blank" rel="noopener">pelco.tr</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="portrait">
+            <img src="./assets/pelin-hero.jpg" alt="Pelin Konak" width="640" height="640" />
+          </div>
+          <div class="float-card float-card--a">
+            <span class="mono">Founder</span>
+            <strong>PelCo</strong>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="mono">PM Intern</span>
+            <strong>SabancıDx</strong>
+          </div>
+          <div class="float-card float-card--c">
+            <span class="mono">Mentör</span>
+            <strong>1-1 program</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats container" aria-label="Kısaca rakamlarla">
+        <div class="stat"><strong>5+</strong><span>yayında ürün &amp; girişim</span></div>
+        <div class="stat"><strong>12 saat</strong><span>ilk PelCo Hackathon, 4 takım</span></div>
+        <div class="stat"><strong>2</strong><span>PelCo Talks bölümü</span></div>
+        <div class="stat"><strong>BTM</strong><span>kuluçka programı</span></div>
+      </section>
+
+      <!-- NOW -->
+      <section id="now" class="section container">
+        <header class="section__head">
+          <p class="eyebrow">01 · Şu an</p>
+          <h2 class="section__title">Bugünlerde neyle uğraşıyorum?</h2>
+        </header>
+        <div class="now-grid">
+          <article class="card now-card reveal">
+            <p class="card__kicker mono">Oca 2026 — devam</p>
+            <h3>PelCo · Kurucu</h3>
+            <p>
+              Öğrenciler ve genç profesyoneller için kariyer topluluğu; aynı çatı altında, ekiplerin teslim risklerini
+              haftalar önce gösteren AI destekli erken uyarı ürünü <a class="inline-link" href="https://www.pelcoapp.com" target="_blank" rel="noopener">PelCo App</a>.
+            </p>
+            <ul class="tags"><li>Ürün vizyonu</li><li>Topluluk</li><li>AI</li></ul>
+          </article>
+          <article class="card now-card reveal">
+            <p class="card__kicker mono">Haz 2026 — devam</p>
+            <h3>SabancıDx · Product Management Intern</h3>
+            <p>
+              Kurumsal ölçekte ürün yönetimi ve ürünleştirme (productization) süreçlerinde çalışıyor; AI ile ürün
+              geliştirme pratiklerini gerçek projelerde uyguluyorum.
+            </p>
+            <ul class="tags"><li>Product Management</li><li>Productization</li><li>Hibrit</li></ul>
+          </article>
+          <article class="card now-card reveal">
+            <p class="card__kicker mono">Sürekli</p>
+            <h3>Yazılım içerik üreticisi</h3>
+            <p>
+              Vibe coding, AI araçlarıyla MVP çıkarma, ürün yönetimi ve öğrenciyken kariyer kurma üzerine içerikler
+              üretiyor; PelCo Talks'ta konukları ağırlıyorum.
+            </p>
+            <ul class="tags"><li>İçerik</li><li>Podcast moderatörlüğü</li><li>Eğitim</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- MENTORSHIP -->
+      <section id="mentorluk" class="section section--feature">
+        <div class="container">
+          <header class="section__head section__head--split">
+            <div>
+              <p class="eyebrow">02 · Mentörlük</p>
+              <h2 class="section__title">Birebir mentörlük: <em>net bir yol haritası</em> ve haftalık takip.</h2>
+            </div>
+            <p class="section__lead">
+              Staj arıyor, kariyer değiştiriyor ya da aklındaki ürünü hayata geçirmek istiyorsan; hedefini birlikte
+              netleştirip ayda bir derin seans ve haftalık kısa check-in'lerle ilerliyoruz.
+            </p>
+          </header>
+
+          <div class="topics">
+            <article class="topic reveal">
+              <span class="topic__icon" aria-hidden="true">◎</span>
+              <h3>Kariyer danışmanlığı</h3>
+              <p>Kariyer planı, alan seçimi, kariyer değişimi ve hedef yönetimi.</p>
+            </article>
+            <article class="topic reveal">
+              <span class="topic__icon" aria-hidden="true">✦</span>
+              <h3>Staj &amp; iş hazırlığı</h3>
+              <p>CV, LinkedIn, portfolyo, başvuru stratejisi ve mülakat provası.</p>
+            </article>
+            <article class="topic reveal">
+              <span class="topic__icon" aria-hidden="true">⌘</span>
+              <h3>Vibe coding &amp; AI ile MVP</h3>
+              <p>Fikrini AI araçlarıyla sıfırdan çalışan bir MVP'ye dönüştürme.</p>
+            </article>
+            <article class="topic reveal">
+              <span class="topic__icon" aria-hidden="true">▤</span>
+              <h3>Ürün &amp; proje yönetimi</h3>
+              <p>Roadmap, önceliklendirme, ekip koordinasyonu ve PM'e geçiş.</p>
+            </article>
+            <article class="topic reveal">
+              <span class="topic__icon" aria-hidden="true">↗</span>
+              <h3>Girişimcilik</h3>
+              <p>Fikir doğrulama, ilk kullanıcılar, kuluçka ve destek başvuruları.</p>
+            </article>
+          </div>
+
+          <div class="mentor-layout">
+            <ol class="steps">
+              <li class="step reveal">
+                <span class="step__num mono">01</span>
+                <div><h3>Başvuru</h3><p>Kısa formu doldur, hedefini ve nerede olduğunu anlat.</p></div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num mono">02</span>
+                <div><h3>48 saatte dönüş</h3><p>Başvurunu inceleyip sana geri dönüyorum.</p></div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num mono">03</span>
+                <div><h3>Ücretsiz tanışma</h3><p>Kısa bir online görüşmeyle birbirimize uygun muyuz, bakıyoruz.</p></div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num mono">04</span>
+                <div><h3>Aylık 1-1 program</h3><p>Zoom / Google Meet üzerinden, haftalık check-in'lerle ilerliyoruz.</p></div>
+              </li>
+            </ol>
+
+            <aside class="offer card reveal" aria-labelledby="offer-title">
+              <p class="card__kicker mono">Aylık program</p>
+              <h3 id="offer-title">Neler dahil?</h3>
+              <ul class="checklist">
+                <li>Ayda 1 adet 60 dakikalık derin seans</li>
+                <li>4 adet 20 dakikalık haftalık check-in</li>
+                <li>Sana özel, yazılı yol haritası</li>
+                <li>Hafta içi mesajla destek</li>
+                <li>İstediğin zaman bırakabilirsin</li>
+              </ul>
+              <p class="offer__note">Her ay sınırlı sayıda yeni danışan alıyorum.</p>
+              <a class="btn btn-primary btn-block" href="https://pelco.tr/" target="_blank" rel="noopener">
+                Başvur ve ücretleri gör <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-ghost btn-block" href="https://wa.me/905301021832" target="_blank" rel="noopener">WhatsApp'tan sor</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMUNITY -->
+      <section id="topluluk" class="section container">
+        <header class="section__head section__head--split">
+          <div>
+            <p class="eyebrow">03 · PelCo topluluğu</p>
+            <h2 class="section__title">Etkinlikler, sohbetler ve <em>birlikte üretmek.</em></h2>
+          </div>
+          <p class="section__lead">
+            PelCo; hackathon'lar, PelCo Talks, seminer ve meetup'larla öğrencileri ve genç profesyonelleri bir araya
+            getiren ücretsiz bir kariyer topluluğu.
+          </p>
+        </header>
+
+        <div class="events">
+          <article class="event card reveal">
+            <div class="event__date"><strong>12</strong><span>Eyl 2026</span></div>
+            <div class="event__body">
+              <p class="card__kicker mono">Hackathon #1</p>
+              <h3>12 saat, 4 takım, tek challenge</h3>
+              <p>
+                Overfit, BitBenders, Nexora ve Beykent öğrencilerin yaşadığı bir problemi çözdü; AI serbestti ama her takım
+                mimari ve güvenlik kararlarını jüriye kendisi savundu. Kazanan: <strong>Overfit</strong>.
+              </p>
+            </div>
+          </article>
+          <article class="event card reveal">
+            <div class="event__date"><strong>09</strong><span>Eki 2026</span></div>
+            <div class="event__body">
+              <p class="card__kicker mono">PelCo Talks · Bölüm 02</p>
+              <h3>Kimya mühendisliğinden 75 bin kişilik topluluğa</h3>
+              <p>Impact4U kurucu ortağı Elif Çolak ile CV, LinkedIn, yüksek lisans kararı ve girişimcilik. Moderatör: Pelin Konak.</p>
+            </div>
+          </article>
+          <article class="event card reveal">
+            <div class="event__date"><strong>07</strong><span>Ağu 2026</span></div>
+            <div class="event__body">
+              <p class="card__kicker mono">PelCo Talks · Bölüm 01</p>
+              <h3>Apple'da açık bulmak ve bug bounty</h3>
+              <p>Güvenlik araştırmacısı Ali Yabuz ile CVE süreci, bug bounty'ye başlangıç ve backend ile güvenliği birlikte yürütmek.</p>
+            </div>
+          </article>
+          <article class="event event--soon card reveal">
+            <div class="event__date"><strong>Yakında</strong><span>Tarih açıklanacak</span></div>
+            <div class="event__body">
+              <p class="card__kicker mono">Sırada</p>
+              <h3>Hackathon #2, yeni Talks bölümleri ve atölyeler</h3>
+              <p>CV, LinkedIn, portfolyo ve mülakat atölyeleri; online ve yüz yüze meetup'lar.</p>
+              <a class="inline-link" href="https://pelco.tr/" target="_blank" rel="noopener">Topluluğa ücretsiz katıl →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="deneyim" class="section section--tint">
+        <div class="container exp-layout">
+          <header class="section__head exp-head">
+            <p class="eyebrow">04 · Deneyim</p>
+            <h2 class="section__title">Yol haritam</h2>
+            <div class="about-mini">
+              <img src="./assets/pelin-about.jpg" alt="" width="640" height="640" />
+              <p>
+                İstanbul Sağlık ve Teknoloji Üniversitesi, Bilgisayar Mühendisliği (2023–devam). Türkçe (ana dil),
+                İngilizce (ileri), İspanyolca (temel).
+              </p>
+            </div>
+          </header>
+
+          <ol class="timeline">
+            <li class="tl reveal">
+              <p class="tl__date mono">Haz 2026 — devam</p>
+              <h3>Product Management Intern · <span>SabancıDx</span></h3>
+              <p>Ürün yönetimi ve ürünleştirme süreçleri; AI ile ürün geliştirme.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Oca 2026 — devam</p>
+              <h3>Founder · <span>PelCo</span></h3>
+              <p>AI destekli erken uyarı ürünü ve kariyer topluluğu; BTM kuluçka programı. Hackathon ve PelCo Talks organizasyonu.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Oca 2026 — Eyl 2026</p>
+              <h3>Project Management Intern · <span>Sca Social</span></h3>
+              <p>Proje planlama, ekip koordinasyonu ve teslim takibi.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Ağu 2025</p>
+              <h3>Bootcamp · <span>DenizBank Yapay Zeka ve Veri Bilimi</span></h3>
+              <p>Yoğun veri bilimi ve AI eğitimi; gerçek dünya ML vaka çalışmaları.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Tem 2025 — Ağu 2025</p>
+              <h3>Software Intern · <span>Sorwe</span></h3>
+              <p>FastAPI, FAISS ve NLP ile AI destekli doküman okuyucu; performans ve güvenilirlik iyileştirmeleri.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Oca 2025 — Ağu 2025</p>
+              <h3>Co-Founder · <span>Zpigo</span></h3>
+              <p>Sessiz istifa tahmini odaklı AI ürünü; roadmap, önceliklendirme ve çapraz fonksiyonel ekip liderliği. İBB desteğine kabul.</p>
+            </li>
+            <li class="tl reveal">
+              <p class="tl__date mono">Eki 2024 — Haz 2025</p>
+              <h3>Başkan Yardımcısı · <span>ISTUN Girişimcilik Kulübü</span></h3>
+              <p>Girişimcilik atölyeleri ve networking etkinlikleri; IEEE üyeliği.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="yetkinlikler" class="section container">
+        <header class="section__head">
+          <p class="eyebrow">05 · Yetkinlikler</p>
+          <h2 class="section__title">Araç setim</h2>
+        </header>
+        <div class="skills">
+          <div class="skill-group card reveal">
+            <h3>Ürün &amp; proje yönetimi</h3>
+            <ul class="tags tags--lg">
+              <li>Product Management</li><li>Productization</li><li>Roadmap &amp; önceliklendirme</li>
+              <li>Gereksinim analizi</li><li>Ekip koordinasyonu</li><li>Teslim takibi</li>
+            </ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>AI &amp; backend</h3>
+            <ul class="tags tags--lg">
+              <li>Python</li><li>FastAPI</li><li>NLP / RAG · FAISS</li><li>Veri bilimi &amp; ML</li>
+              <li>AI destekli geliştirme (vibe coding)</li>
+            </ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Web &amp; mobil</h3>
+            <ul class="tags tags--lg">
+              <li>React</li><li>Next.js</li><li>HTML / CSS / JS</li><li>Kotlin · Android</li><li>Git</li>
+            </ul>
+          </div>
+          <div class="skill-group card reveal">
+            <h3>Topluluk &amp; iletişim</h3>
+            <ul class="tags tags--lg">
+              <li>Mentörlük</li><li>İçerik üretimi</li><li>Etkinlik &amp; hackathon tasarımı</li>
+              <li>Podcast moderatörlüğü</li><li>Girişimcilik</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projeler" class="section section--tint">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">06 · Projeler</p>
+            <h2 class="section__title">Kurduğum ve geliştirdiğim ürünler</h2>
+          </header>
+          <div class="projects">
+            <a class="project card reveal" href="https://www.pelcoapp.com" target="_blank" rel="noopener" style="--hue: 245">
+              <span class="project__badge mono">PC</span>
+              <h3>PelCo App</h3>
+              <p>Takım check-in'leri ve proje sinyallerinden teslim riskini, iş yükü dengesizliğini ve verim düşüşünü erkenden gösteren AI katmanı.</p>
+              <span class="project__link mono">pelcoapp.com ↗</span>
+            </a>
+            <a class="project card reveal" href="https://www.pelacademyapp.com" target="_blank" rel="noopener" style="--hue: 25">
+              <span class="project__badge mono">PA</span>
+              <h3>PelAcademy</h3>
+              <p>Vibe coding ile kendi MVP'ni üretmeyi öğreten AI destekli eğitim platformu.</p>
+              <span class="project__link mono">pelacademyapp.com ↗</span>
+            </a>
+            <a class="project card reveal" href="https://ieltstalk.com" target="_blank" rel="noopener" style="--hue: 285">
+              <span class="project__badge mono">IT</span>
+              <h3>IELTS Talk</h3>
+              <p>AI tabanlı IELTS speaking pratiği: etkileşimli simülasyonlar ve anında geri bildirim.</p>
+              <span class="project__link mono">ieltstalk.com ↗</span>
+            </a>
+            <a class="project card reveal" href="https://www.zpigo.com" target="_blank" rel="noopener" style="--hue: 170">
+              <span class="project__badge mono">ZP</span>
+              <h3>Zpigo</h3>
+              <p>Sessiz istifayı önceden tahmin etmeyi hedefleyen AI ürünü; roadmap ve ekip liderliği.</p>
+              <span class="project__link mono">zpigo.com ↗</span>
+            </a>
+            <a class="project card reveal" href="https://www.veranatura.com.tr" target="_blank" rel="noopener" style="--hue: 120">
+              <span class="project__badge mono">VN</span>
+              <h3>Vera Natura</h3>
+              <p>Doğal ürünler için e-ticaret: marka, paketleme ve müşteri deneyimi.</p>
+              <span class="project__link mono">veranatura.com.tr ↗</span>
+            </a>
+            <a class="project card reveal" href="https://github.com/pelinkonak/ai-doc-reader" target="_blank" rel="noopener" style="--hue: 200">
+              <span class="project__badge mono">AI</span>
+              <h3>AI Document Reader</h3>
+              <p>Yüklenen dokümanlardan cevap çıkaran soru-cevap sistemi: FastAPI, FAISS ve NLP.</p>
+              <span class="project__link mono">GitHub ↗</span>
+            </a>
+          </div>
+
+          <div class="repos">
+            <div class="repos__head">
+              <h3>GitHub'daki güncel repolar</h3>
+              <a class="inline-link" href="https://github.com/pelinkonak" target="_blank" rel="noopener">Tümü ↗</a>
+            </div>
+            <p id="github-error" class="repos__error hidden" role="alert"></p>
+            <div class="repo-grid" id="github-grid" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="iletisim" class="section container">
+        <div class="cta-panel reveal">
+          <div>
+            <p class="eyebrow eyebrow--light">07 · İletişim</p>
+            <h2 class="cta-panel__title">Bir sonraki adımını <em>birlikte</em> planlayalım.</h2>
+            <p>Mentörlük, iş birliği, konuşmacılık ya da PelCo etkinlikleri için yazabilirsin.</p>
+            <div class="hero__ctas">
+              <a class="btn btn-light" href="https://pelco.tr/" target="_blank" rel="noopener">Mentörlüğe başvur →</a>
+              <a class="btn btn-outline-light" href="mailto:pelin.konak928@gmail.com">E-posta gönder</a>
+            </div>
+          </div>
+          <ul class="contact-list">
+            <li><span class="mono">E-posta</span><a href="mailto:pelin.konak928@gmail.com">pelin.konak928@gmail.com</a></li>
+            <li><span class="mono">Telefon / WhatsApp</span><a href="https://wa.me/905301021832" target="_blank" rel="noopener">+90 530 102 1832</a></li>
+            <li><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/pelinkonak/" target="_blank" rel="noopener">in/pelinkonak</a></li>
+            <li><span class="mono">Instagram</span><a href="https://instagram.com/peliinkonak" target="_blank" rel="noopener">@peliinkonak</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year">2026</span> Pelin Konak</p>
+      <a href="#top" class="mono">Başa dön ↑</a>
     </footer>
 
     <script src="script.js"></script>
